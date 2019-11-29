@@ -1,5 +1,7 @@
 section#main.page.page-0.js-page.is-show
     .container.container_page-0.js-parallax-page-0
+        .page-0__decor.js-parallax-page-0
+            .page-0__money.js-parallax-bg
         .content.content__left
             a.logo(href="https://novex.ru" target="_blank") Novex
                 span.logo-en
@@ -7,13 +9,19 @@ section#main.page.page-0.js-page.is-show
             .page-0__text
                 .page-0__date 2-29 декабря
                 h3.title.page-0__title Выиграй
-                    br 
+                    br
+                .amount__wrap
                     .amount
                         |50 000
-                        .currency 
+                        .currency
                             |рублей
+                        .counter
+                            .counter__inner
+                                .counter__multi x
+                                .counter__number 8
+                                .counter__units шт
 
-                a(href='#register').button.button-red.js-scroll-link Зарегистрировать код
+                a(href='#register').button.button.js-scroll-link Зарегистрировать код
             .mouse
                 .mouse__roller
 

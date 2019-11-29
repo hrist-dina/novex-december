@@ -1,7 +1,103 @@
 .page-0 {
   position: relative;
 
+  &__decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 
+  &__money {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    background: no-repeat center right url("../img/page0/money.png");
+    background-size: contain;
+    max-width: 1240px;
+    width: 100%;
+    height: 100%;
+    max-height: 880px;
+    z-index: 1;
+
+    @include notebook {
+      max-width: 75vw;
+    }
+
+    @include lg-block {
+      bottom: 0;
+      top: auto;
+      left: -20%;
+      right: 0;
+      margin: auto;
+      max-width: 300%;
+      max-height: 100vh;
+      background-size: contain;
+
+      @include sm-block {
+        max-height: 80vh;
+        left: -40%;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  & .amount {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 500;
+    font-size: 8.66vh;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @include notebook {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 6.29vh  /* 62/9.85 */;
+    }
+
+    @include sm-block {
+      font-size: 36px;
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 665px;
+    }
+  }
+
+  & .currency {
+    font-size: 2.57vh;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+
+    @include notebook {
+      margin-right: 30px;
+    }
+
+    @include sm-block {
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+  }
+
+  & .button {
+    margin-top: 50px;
+
+    @include sm-block {
+      margin-top: 30px;
+    }
+  }
 
   & .container {
     display: flex;
@@ -17,7 +113,6 @@
     height: 100%;
     width: 50%;
     @include lg-block {
-      height: 100vh;
       width: 100%;
       box-sizing: border-box;
     }
@@ -25,38 +120,22 @@
 
   & .content__left {
     position: relative;
-    background: url("../img/page0/bg-left.png") no-repeat center;
-    background-size: cover;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: linear-gradient(138.65deg, #00A0E3 3.27%, #007AC9 78.83%);
-    }
+    background: linear-gradient(138.65deg, #00A0E3 3.27%, #007AC9 78.83%);
 
     @include lg-block {
-      height: auto;
-      min-height: 100vh;
+      height: 100vh;
     }
-
-
-
-
   }
 
   & .content__right {
     position: relative;
-    background: url('../img/page0/bg-right.png') no-repeat center;
+    background: url('../img/page0/bg-right.png') no-repeat center #D74C6D;
+    height: 100%;
     background-size: cover;
     padding-left: 21.51vw  /* 413/19.2 */;
     @include lg-block {
       padding: 20px 15px;
-      height: 80vh;
+      height: 90vh;
     }
 
     @include sm-block {
@@ -64,33 +143,6 @@
     }
   }
 
-  &__right-logo {
-    text-align: right;
-    width: 130px;
-    height: 130px;
-    position: absolute;
-    top: 48px;
-    right: 55px;
-
-    & img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    @include notebook {
-      top: 30px;
-      right: 30px;
-      width: 80px;
-      height: 80px;
-    }
-
-    @include sm-block {
-      top: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-    }
-  }
 
   &__text {
     margin-top: 23.63vh  /* 100/9.85 */;
@@ -98,12 +150,12 @@
 
     @include lg-block {
       margin-top: 30px;
-      padding-bottom: 280px;
+      //padding-bottom: 280px;
     }
 
     @include sm-block {
       margin-top: 15px;
-      padding-bottom: 300px;
+      //padding-bottom: 300px;
     }
   }
 
@@ -120,23 +172,113 @@
     }
   }
 
-  & .title {
+  &__title {
     color: #fff;
-    font-size: 9.08vh  /* 54/9.85 */;
-    line-height: 11.45vh  /* 73/9.85 */;
-    margin-bottom: 0.20vh  /* 35/9.85 */;
+    font-size: 9.08vh;
+    line-height: 11.45vh;
+    margin-bottom: 0.20vh;
     font-weight: 800;
-    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     @include lg-block {
-      font-size: 36px;
-      line-height: 44px;
-      margin-bottom: 30px;
+      font-size: 76px;
+      line-height: 68px;
+      margin-bottom: 5px;
     }
 
     @include sm-block {
-      font-size: 28px;
-      line-height: 40px;
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+  }
+
+  .counter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    right: -198px;
+    width: 148px;
+    height: 148px;
+    background: #fff;
+    color: #007AC9;
+    font-weight: 800;
+    border-radius: 50%;
+    text-shadow: none;
+
+    @include notebook {
+      position: relative;
+      right: auto;
+      left: 0;
+      margin-right: auto;
+      margin-left: 0;
+      width: 98px;
+      height: 98px;
+    }
+
+    @include lg-block {
+      width: 58px;
+      height: 58px;
+    }
+
+
+    &__inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__multi {
+      font-size: 3.86vh  /* 38/9.85 */;
+      line-height: 4.87vh  /* 48/9.85 */;
+      margin-right: 7px;
+
+      @include notebook {
+        font-size: 2.84vh  /* 28/9.85 */;
+        line-height: 3.65vh  /* 36/9.85 */;
+      }
+
+      @include lg-block {
+        font-size:  18px;
+        line-height: 1;
+        margin-right: 1px;
+      }
+    }
+
+    &__number {
+      font-size: 8.93vh  /* 88/9.85 */;
+      line-height: 11.27vh  /* 111/9.85 */;
+      margin-right: 10px;
+
+      @include notebook {
+        font-size: 6.9vh  /* 68/9.85 */;
+        line-height: 8.12vh  /* 80/9.85 */;
+      }
+      @include lg-block {
+        font-size: 28px;
+        line-height: 1;
+        margin-right: 2px;
+      }
+    }
+
+    &__units {
+      font-size: 2.74vh  /* 27/9.85 */;
+      line-height: 3.45vh  /* 34/9.85 */;
+      @include notebook {
+        font-size: 2.23vh  /* 22/9.85 */;
+        line-height: 2.84vh  /* 28/9.85 */;
+      }
+      @include lg-block {
+        font-size: 14px;
+        line-height: 1;
+      }
     }
   }
 
@@ -210,21 +352,4 @@
   to {
     margin-left: 0;
   }
-}
-
-.amount {
-  font-weight: 500;
-  font-size: 8.66vh;
-  line-height: 7.43vh;
-  color: #FFFFFF;
-  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.currency {
-  font-size: 2.57vh;
-  // line-height: 7.43vh;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
 }

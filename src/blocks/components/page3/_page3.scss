@@ -30,7 +30,7 @@
     width: 50vw;
     margin: 0;
     z-index: 1;
-    padding-top: 11.68vh  /* 115/9.85 */;
+    padding-top: 23.65vh  /* 233/9.85 */;
     padding-left: 6.771vw  /* 130/19.2 */;
     padding-right: 8.75vw  /* 168/19.2 */;
     background: url("../img/page3/bg-right.png"), #E3EDFF no-repeat center;
@@ -41,38 +41,22 @@
     }
   }
 
-  &__nevia {
-    display: inline-block;
-
-    & img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    @include lg-block {
-      max-height: 80px;
-      max-width: 80px;
-    }
-
-    @include sm-block {
-      margin-top: -15px;
-    }
-  }
 
   &__title {
-    color: #03158B;
+    color: #007AC9;
     margin-bottom: 3.05vh  /* 30/9.85 */;
   }
 
   &__text {
-    max-width: 580px;
+    max-width: 610px;
     font-size: 1.83vh  /* 18/9.85 */;
     line-height: 3.05vh  /* 30/9.85 */;
-    color: #03158B;
+    color: #333333;
     margin-bottom: 3.86vh  /* 38/9.85 */;
 
     & a {
-      color: #03158B;
+      font-size: 600;
+      color: #333333;
       text-decoration: none;
       white-space: nowrap;
     }
@@ -82,8 +66,8 @@
     margin-right: 1.5625vw  /* 30/19.2 */;
     margin-bottom: 1.5625vw  /* 30/19.2 */;
     @include lg-block {
-      margin-right: 20px;
-      margin-bottom: 20px;
+      margin-right: 16px;
+      margin-bottom: 16px;
 
       &:last-child {
         margin-bottom: 0;

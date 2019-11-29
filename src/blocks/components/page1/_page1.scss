@@ -1,5 +1,18 @@
 .page-1 {
 
+  & .title {
+    font-weight: 500;
+    font-size: 4.47vh  /* 44/9.85 */;
+    line-height: 4.87vh  /* 48/9.85 */;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2.44vh  /* 24/9.85 */;
+
+    & b {
+      text-transform: uppercase;
+    }
+  }
+
   & .container {
     display: flex;
 
@@ -26,6 +39,17 @@
     background: url("../img/page1/bg-left.png"), no-repeat center;
     background-size: cover;
     overflow: hidden;
+    z-index: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9.85vh  /* 97/9.85 */;
+
+    @include lg-block {
+      padding: 40px 15px;
+    }
+
 
     &:before {
       content: '';
@@ -40,47 +64,57 @@
   }
 
   & .content__right {
-    background: url('../img/page1/bg-right.png');
+    padding-top: 8.53vh  /* 84/9.85 */;
+    background: no-repeat center url('../img/page1/bg-right.png');
+    background-size: cover;
     align-items: center;
   }
 
   &__text {
-    margin-top: 3.55vh  /* 35/9.85 */;
+    font-weight: 500;
+    font-size: 3.25vh  /* 32/9.85 */;
+    line-height: 4.06vh  /* 40/9.85 */;
+    text-align: center;
     color: #fff;
+    width: 100%;
   }
 
   &__date {
     font-size: 2.44vh  /* 24/9.85 */;
     line-height: 3.65vh  /* 36/9.85 */;
     color: #fff;
-    margin-bottom: 1.22vh  /* 12/9.85 */;
+    margin-bottom: 2.74vh  /* 27/9.85 */;
   }
 
-  &__desc {
-    font-size: 3.25vh  /* 32/9.85 */;
-    line-height: 4.87vh  /* 48/9.85 */;
-    text-transform: uppercase;
+  &__amount {
+    width: 100%;
+    margin-top: 4.06vh  /* 40/9.85 */;
+    margin-bottom: 6.09vh  /* 60/9.85 */;
+    font-weight: bold;
+    font-size: 4.87vh  /* 48/9.85 */;
+    line-height: 4.06vh  /* 40/9.85 */;
+    text-align: center;
     color: #fff;
-    margin-top: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      margin-left: 8px;
+      font-size: 24px;
+      line-height: 40px;
+    }
   }
 
   &__products {
-    max-width: 794px;
+    max-width: 718px;
     width: 100%;
     max-height: 474px;
     box-sizing: border-box;
-    margin-top: 7.11vh  /* 70/9.85 */;
-    position: absolute;
-    right: 4.5625vw;
-    bottom: 10.66vh  /* 105/9.85 */;
 
     @include lg-block {
       position: relative;
-      right: auto;
-      bottom: auto;
-      transform: scale(1.2);
       margin-bottom: 20px;
-      overflow: hidden;
     }
 
     & img {
@@ -91,14 +125,23 @@
 
   &__raffle {
     
-    & h3 {
+    & .title {
       font-weight: bold;
       color: #007AC9;
       font-size: 4.78vh  /* 32/9.85 */;
       line-height: 4.78vh  /* 64/9.85 */;
       text-align: center;
+      margin-bottom: 4.06vh  /* 40/9.85 */;
+    }
+
+    & .products__img {
+      max-width: 596px;
+      width: 100%;
+
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
-
-
 }

@@ -6,7 +6,7 @@
         height: 100%;
         position: relative;
         display: flex;
-        background: url('../img/noise.png'), #03158B;
+        background: url('../img/noise.png'), linear-gradient(118.83deg, #009FDA 2.49%, #007AC9 95.3%);
         @include lg-block {
             flex-direction: column;
         }
@@ -18,19 +18,23 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        padding-bottom: 6.8vh  /* 67/9.85 */;
     }
 
     &__title {
+        font-weight: bold;
+        font-size: 4.47vh  /* 44/9.85 */;
+        line-height: 5.69vh  /* 56/9.85 */;
         margin-top: 1.02vh  /* 10/9.85 */;
-        margin-bottom: 7.11vh  /* 70/9.85 */;
+        margin-bottom: 6.09vh  /* 60/9.85 */;
     }
 }
 
 
 .copyright {
     text-align: center;
-    font-size: 1.62vh  /* 16/9.85 */;
-    line-height: 2.44vh  /* 24/9.85 */;
+    font-size: 1.52vh  /* 15/9.85 */;
+    line-height: 2.13vh  /* 21/9.85 */;
     color: #fff;
     margin-top: 10.15vh  /* 100/9.85 */;
     display: flex;
@@ -42,83 +46,137 @@
 .raffle {
     &-card {
         @include col();
-        @include size(2);
-        @include size-lg(5);
-        box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.05);
+        @include size(5);
+        @include size-xl(10);
         background: #fff;
         box-sizing: border-box;
-        margin-bottom: 26px;
-
-        @include notebook {
-            @include size(2.5);
-        }
+        margin-bottom: 32px;
 
         @include lg-block {
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 0 24px 0;
+        }
+
+        &-inner {
+            display: flex;
+            @include sm-block {
+                flex-direction: column;
+            }
         }
 
         &__list {
             @include row-flex();
         }
 
-        &__top {
-            background: #C0D1EE;
-            height: 185px;
-            overflow: hidden;
+        &__date {
+            width: 112px;
+            height: 112px;
+            padding: 16px 20px;
+            background: #F8981D;
+            text-align: center;
+            color: #fff;
+            box-sizing: border-box;
+
+            @include notebook {
+                width: 100px;
+                height: 100px;
+            }
+
+            @include sm-block {
+                width: 100%;
+            }
+        }
+
+        &__day {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 48px;
+            @include notebook {
+                font-size: 32px;
+                line-height: 36px;
+            }
+        }
+
+        &__month {
+            font-size: 27px;
+            line-height: 32px;
+            @include notebook {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+
+        &__content {
+            width: #{'calc(100% - 112px)'};
+            padding: 20px 23px 20px 27px;
             box-sizing: border-box;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            @include notebook {
+                padding: 17px 14px 17px 20px;
+            }
 
-            & img {
-                max-width: 100%;
-                max-height: 100%;
+            @include sm-block {
+                width: 100%;
+                flex-direction: column;
+            }
+
+
+            &-inner {
+                padding-right: 10px;
+                box-sizing: border-box;
+                width: #{'calc(100% - 180px)'};
+
+                @include notebook {
+                    width: #{'calc(100% - 150px)'};
+                }
+
+                @include sm-block {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
             }
         }
 
         &__name {
-            padding: 9px 20px 15px;
             font-size: 27px;
-            line-height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            text-transform: uppercase;
-            color: #00136F;
-            height: 84px;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        &__bottom {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px 20px;
-            text-align: center;
-            box-sizing: border-box;
-            background: #FDAF1B;
-        }
-
-        &__city,
-        &__number {
-            font-size: 18px;
-            line-height: 32px;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
+            line-height: 40px;
+            color: #000;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: 100%;
+            white-space: nowrap;
+
+            @include notebook {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
+        &__city {
+            font-size: 18px;
+            line-height: 32px;
+            color: #000;
+        }
+
+        &__number {
+            background: #007AC9;
+            font-size: 24px;
+            line-height: 32px;
+            padding: 20px 36px 18px;
+            text-align: center;
+            color: #fff;
+
+            @include notebook {
+                padding: 15px 26px 13px;
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
     }
 }
 
 .slick-slide > div {
-    padding: 0 20px;
+    padding: 0 12px;
     box-sizing: border-box;
 }
 

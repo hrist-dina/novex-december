@@ -5,7 +5,7 @@
   right: 50%;
   left: 0;
   z-index: 1000;
-  background: url('../img/noise.png'), #03158B;
+  background: url('../img/noise.png'), #D74C6D;
   -moz-transition: left 0.3s ease;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
@@ -79,6 +79,8 @@
 
 .menu__item.active .menu__link {
   color: #fff;
+  font-size: 40px;
+  line-height: 50px;
 }
 
 .menu__item.active {
@@ -89,9 +91,10 @@
 .menu .menu__link {
   border-bottom: none;
   position: relative;
-  font-size: 40px;
-  line-height: 50px;
-  color: #CAE3ED;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFC4D1;
   border-bottom: none;
   text-decoration: none;
   cursor:pointer;

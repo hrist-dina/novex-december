@@ -1,7 +1,7 @@
 body {
 	font-size: 16px;
 	font-weight: normal;
-	font-family: "Nivea", sans-serif;
+	font-family: "Geometria", sans-serif;
 	color: #fff;
 	min-width: 320px;
 	overflow: hidden;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .content {
-	padding: 5.4vh /* 46/9.85 */ 6.25vw  /* 120/19.2 */;
+	padding: 4.4vh 6.25vw;
 	max-width: 1560px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -118,7 +118,6 @@ h1, h2, h3, h4, h5, h6, ul {
 .title {
 	font-size: 5.48vh  /* 54/9.85 */;
 	line-height: 6.5vh  /* 64/9.85 */;
-	text-transform: uppercase;
 	color: #fff;
 	@include lg-block {
 		font-size: 44px;
@@ -151,9 +150,8 @@ h1, h2, h3, h4, h5, h6, ul {
 	&-en {
 		display: inline-block;
 		background: url("../img/page0/logo-en.svg") no-repeat center;
-		width: 171px;
-		height: 31px;
-		margin-right: 20px;
+		width: 223px;
+		height: 49px;
 		background-size: contain;
 	}
 
@@ -302,19 +300,35 @@ h1, h2, h3, h4, h5, h6, ul {
 .button {
 	position: relative;
 	display: inline-block;
-	padding: 18px 33px;
+	padding: 16px 40px 19px;
 	border: none;
 	box-sizing: border-box;
 	color: #FFFFFF;
-	font-size: 2.06vh  /* 18/9.85 */;
-	line-height: 2.57vh  /* 24/9.85 */;
+	font-weight: 500;
+	font-size: 2.06vh;
+	line-height: 2.57vh;
 	text-align: center;
 	text-decoration: none;
 	background: #FF4F73;
 	cursor: pointer;
+	box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.2);
+
+	@include lg-block {
+		font-size: 16px;
+		line-height: 21px;
+	}
 
 	&:hover {
 		background: linear-gradient(99.37deg, rgba(255, 79, 115, 1) 7.72%, rgba(255, 79, 115, 1) 92.55%);
+	}
+
+	&:active {
+		box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	&[disabled] {
+		opacity: .8;
+		cursor: not-allowed;
 	}
 
 }

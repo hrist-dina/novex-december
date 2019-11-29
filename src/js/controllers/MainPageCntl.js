@@ -164,8 +164,8 @@ export class MainPageCntl {
             50
         );
         new Parallax(
-            '.js-parallax-page-1',
-            '.js-parallax-bg-1',
+            '.js-parallax-page-2',
+            '.js-parallax-bg-2',
             50
         );
         // new Parallax(

@@ -1,11 +1,15 @@
 .page-2 {
 
+  & .button {
+    width: 100%;
+  }
+
   &__title {
     margin-top: 2.84vh  /* 28/9.85 */;
-    position: relative;
-    color: #fff;
+    font-weight: bold;
+    font-size: 4.47vh  /* 44/9.85 */;
+    line-height: 5.69vh  /* 56/9.85 */;
     z-index: 1;
-    letter-spacing: 0.04em;
     margin-bottom: 1.22vh  /* 12/9.85 */;
 
     @include lg-block {
@@ -93,7 +97,7 @@
     position: relative;
     width: 50vw;
     margin: 0;
-    background: url('../img/noise.png'), linear-gradient(180deg, #2167B9 4.77%, #FFFFFF 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #FFC2D1 0%, #EF94A9 44.27%, #D74C6D 100%);
     @include lg-block {
       width: 100%;
       overflow: hidden;
@@ -101,7 +105,7 @@
   }
 
   & .content__right {
-    background: url('../img/noise.png'), #5A4282;
+    background: url('../img/noise.png'), #007AC9;
     width: 50vw;
     margin: 0;
     z-index: 1;
@@ -122,114 +126,30 @@
     }
   }
 
-  &__products {
+  &__decor {
     position: absolute;
     width: 100%;
     height: 100%;
     bottom: 0;
     z-index: -1;
+  }
 
-    @include to(360px) {
-      display: none;
-    }
+  &__money {
+    position: absolute;
+    top: 0;
+    bottom: 18.15vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: no-repeat center url("../img/page2/money.png");
+    background-size: contain;
+    max-width: 859px;
+    width: 100%;
+    height: 800px;
 
     @include lg-block {
-      left: 0;
-      right: 0;
-      margin: auto;
-      box-sizing: border-box;
+      transform: scale(1.2);
     }
-
-    & .deodorant {
-      background: url("../img/page2/deodorant.png") no-repeat center;
-      width: 15.78125vw  /* 303/19.2 */;
-      height: 45.38vh  /* 447/9.85 */;
-      left: 0;
-      bottom: 0;
-
-      @include lg-block {
-        left: -15px;
-        width: 303px;
-        height: 447px;
-      }
-
-      @include sm-block {
-        width: 203px;
-        height: 347px;
-      }
-    }
-
-    & .roller {
-      background: url("../img/page2/roller.png") no-repeat center;
-      width: 11.40625vw  /* 219/19.2 */;
-      height: 41.83vh  /* 412/9.85 */;
-      top: -10.66vh  /* -105/9.85 */;
-      left: 5.208vw  /* 100/19.2 */;
-
-      @include lg-block {
-        width: 219px;
-        height: 412px;
-        left: 0;
-      }
-
-      @include sm-block {
-        left: -15px;
-        width: 119px;
-        height: 312px;
-      }
-    }
-
-    & .cream {
-      background: url("../img/page2/cream.png") no-repeat center;
-      width: 11.927vw  /* 229/19.2 */;
-      height: 23.25vh  /* 229/9.85 */;
-      top: -5.08vh  /* 50/9.85 */;
-      right: 9.635vw  /* 185/19.2 */;
-
-      @include lg-block {
-        width: 229px;
-        height: 229px;
-      }
-
-      @include sm-block {
-        top: 0;
-        right: 0;
-        width: 129px;
-        height: 129px;
-      }
-    }
-
-    & .balsam {
-      background: url("../img/page2/balsam.png") no-repeat left center;
-      width: 13.229vw  /* 254/19.2 */;
-      height: 33.2vh  /* 327/9.85 */;
-      right: 3.125vw  /* 60/19.2 */;
-      bottom: 16.24vh  /* 160/9.85 */;
-
-      @include lg-block {
-        width: 254px;
-        height: 327px;
-        right: -25px;
-      }
-
-      @include sm-block {
-        width: 154px;
-        height: 227px;
-        right: -45px;
-      }
-    }
-
-    & .deodorant,
-    & .roller,
-    & .cream ,
-    & .balsam {
-      position: absolute;
-      display: inline-block;
-      background-size: contain;
-      background-position: left center;
-      z-index: -1;
-    }
-
   }
 }
 
@@ -239,7 +159,13 @@
 }
 
 .ticket-form__elem {
-  margin-bottom: 2.44vh  /* 24/9.85 */
+  margin-bottom: 2.44vh  /* 24/9.85 */;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+
+  &.error {
+    border-color: #FF4F73;
+  }
 }
 
 .tablet .ticket-form__elem {
@@ -366,9 +292,8 @@
 }
 
 .error .ticket-form__elem-title {
-  top: 4px;
+  top: 0;
   font-size: 0.87rem;
-  color: #ED395E;
 }
 
 .tablet .error .ticket-form__elem-title {
@@ -382,7 +307,7 @@
 }
 
 .success .ticket-form__elem-title{
-  top: 4px;
+  top: 0;
   font-size: 0.87rem;
   color: #5a6555;
 }
@@ -401,8 +326,8 @@
   position: absolute;
   bottom: -1.3em;
   width: 100%;
-  color: #FF4F73;
-  font-size: 0.8em;
+  color: #fff;
+  font-size: 0.9em;
   margin-top: 1px;
   margin-bottom: 0;
   @include lg-block {
@@ -504,10 +429,10 @@
   display: inline-block;
   cursor: pointer;
 
-  background: #C0D1EE;
+  background: #fff;
   .checkbox-hide:checked + &:after {
-    background-image: url(icon-check('C0D1EE'));
-    background-color: #03158B;
+    background-image: url(icon-check('fff'));
+    background-color: #007AC9;
   }
 }
 
@@ -518,7 +443,7 @@
 
 
 .ticket-form-success {
-  background: url('../img/noise.png'), #5A4282;
+  background: url('../img/noise.png'), #007AC9;
   background-size: contain;
   width: 100%;
   height: 100%;

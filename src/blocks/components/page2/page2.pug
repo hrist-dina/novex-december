@@ -1,15 +1,13 @@
 section#register.page.page-2.js-page
-    .container.container_page-2
+    .container.container_page-2.js-parallax-page-2
         .content.content__left
             h2.title.page-2__title
                 | Зарегистрируй
-            .page-2__desc специальный код с чека
+                br
+                |специальный код с чека
             .page-2__check
-                .page-2__products
-                    .deodorant
-                    .roller
-                    .cream
-                    .balsam
+                .page-2__decor
+                    .page-2__money.js-parallax-bg-2
                 img(src='img/page2/check.png', alt='')
 
         .content.content__right
@@ -50,7 +48,7 @@ section#register.page.page-2.js-page
                             a.js-scroll-link(href='#conditions') Условия розыгрыша
                             |
                             | , согласен на обработку персональных данных
-                    button.button.button_not-border.js-ticket-form__submit-button(disabled='')
+                    button.button.js-ticket-form__submit-button(disabled='')
                         | Отправить
                 .ticket-form-success.js-ticket-form-success(style='display: none;')
                     .ticket-form-success__container
