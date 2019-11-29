@@ -123,7 +123,8 @@
     background: linear-gradient(138.65deg, #00A0E3 3.27%, #007AC9 78.83%);
 
     @include lg-block {
-      height: 100vh;
+      height: 75vh;
+      box-sizing: border-box;
     }
   }
 
@@ -187,7 +188,7 @@
     }
 
     @include sm-block {
-      font-size: 48px;
+      font-size: 58px;
       line-height: 1;
       margin-bottom: 15px;
     }
