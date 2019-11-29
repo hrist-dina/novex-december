@@ -302,65 +302,21 @@ h1, h2, h3, h4, h5, h6, ul {
 .button {
 	position: relative;
 	display: inline-block;
-	padding: 14px 30px;
+	padding: 18px 33px;
 	border: none;
 	box-sizing: border-box;
-	color: #fff;
-	font-size: 1.83vh  /* 18/9.85 */;
-	line-height: 2.44vh  /* 24/9.85 */;
+	color: #FFFFFF;
+	font-size: 2.06vh  /* 18/9.85 */;
+	line-height: 2.57vh  /* 24/9.85 */;
 	text-align: center;
 	text-decoration: none;
-	background: linear-gradient(99.37deg, #FF4F73 7.72%, #F74A54 92.55%);
-	border-radius: 32px;
+	background: #FF4F73;
 	cursor: pointer;
-	@include transition();
-	@include outline-none();
 
 	&:hover {
 		background: linear-gradient(99.37deg, rgba(255, 79, 115, 1) 7.72%, rgba(255, 79, 115, 1) 92.55%);
 	}
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: -10px;
-		left: -10px;
-		width: #{calc(100% + 20px)};
-		height: #{calc(100% + 20px)};
-		padding: 10px;
-		border: 1px solid rgba(255, 79, 115, 0.4);
-		box-sizing: border-box;
-		border-radius: 43px;
-		@include transition();
-	}
-
-	&:hover:before{
-		border: 11px solid rgba(255, 79, 115, 1);
-	}
-
-
-	&[disabled] {
-		background: rgba(255, 79, 115, 0.4);
-		cursor: not-allowed;
-	}
-
-	@include lg-block {
-		font-size: 14px;
-		line-height: 20px;
-	}
-
-	&_not-border {
-		&:before {
-			content: none;
-		}
-		&:not([disabled]):hover {
-			background: linear-gradient(99.37deg, rgba(255, 79, 115, 0.9) 7.72%, rgba(247, 74, 84, 0.9) 92.55%);
-		}
-
-		&:active {
-			box-shadow: inset 0px -3px 2px 1px rgba(180, 80, 100, 1);
-		}
-	}
 }
 
 .block-vertical-center {

@@ -1,38 +1,7 @@
 .page-0 {
   position: relative;
 
-  & .center {
-    position: absolute;
-    max-width: 411px;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 0 16px;
-    & img {
-      width: 100%;
-    }
 
-    @include notebook {
-      max-width: 350px;
-    }
-
-    @include lg-block {
-      max-width: 300px;
-      top: 50vh;
-      right: 0;
-      left: auto;
-      z-index: 5;
-    }
-
-    @include to(525px) {
-      display: none;
-    }
-  }
 
   & .container {
     display: flex;
@@ -67,7 +36,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: linear-gradient(137.57deg, #03158B 2.78%, #00136F 67.68%);
+      background: linear-gradient(138.65deg, #00A0E3 3.27%, #007AC9 78.83%);
     }
 
     @include lg-block {
@@ -75,21 +44,8 @@
       min-height: 100vh;
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: url("../img/page0/products.png") no-repeat center bottom;
-      background-size: contain;
-      width: 403px;
-      height: 422px;
 
-      @include notebook {
-        width: 303px;
-        height: 322px;
-      }
-    }
+
 
   }
 
@@ -137,7 +93,7 @@
   }
 
   &__text {
-    margin-top: 10.15vh  /* 100/9.85 */;
+    margin-top: 23.63vh  /* 100/9.85 */;
     z-index: 10;
 
     @include lg-block {
@@ -152,10 +108,11 @@
   }
 
   &__date {
-    font-size: 2.44vh  /* 24/9.85 */;
-    line-height: 3.25vh  /* 32/9.85 */;
+    font-size: 2.78vh  /* 24/9.85 */;
+    line-height: 3.50vh  /* 32/9.85 */;
     color: #fff;
-    margin-bottom: 1.62vh  /* 16/9.85 */;
+    margin-bottom: 0.92vh  /* 16/9.85 */;
+    font-weight: 500;
     @include lg-block {
       font-size: 20px;
       line-height: 32px;
@@ -165,10 +122,11 @@
 
   & .title {
     color: #fff;
-    font-size: 5.48vh  /* 54/9.85 */;
-    line-height: 7.41vh  /* 73/9.85 */;
-    margin-bottom: 3.55vh  /* 35/9.85 */;
-    font-weight: normal;
+    font-size: 9.08vh  /* 54/9.85 */;
+    line-height: 11.45vh  /* 73/9.85 */;
+    margin-bottom: 0.20vh  /* 35/9.85 */;
+    font-weight: 800;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     @include lg-block {
       font-size: 36px;
@@ -252,4 +210,21 @@
   to {
     margin-left: 0;
   }
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 8.66vh;
+  line-height: 7.43vh;
+  color: #FFFFFF;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.currency {
+  font-size: 2.57vh;
+  // line-height: 7.43vh;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
 }
