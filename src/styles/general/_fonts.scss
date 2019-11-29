@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Nivea';
+    src: url('../fonts/ncvli-regular-webfont.eot');
+    src: local('ncvli-regular-webfont'), local('ncvli-regular-webfont'),
+    url('../fonts/ncvli-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ncvli-regular-webfont.woff2') format('woff2'),
+    url('../fonts/ncvli-regular-webfont.woff') format('woff'),
+    url('../fonts/ncvli-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: 'Nivea';
+    src: url('../fonts/ncvlic-light-webfont.eot');
+    src: local('ncvlic-light-webfont'), local('ncvlic-light-webfont'),
+    url('../fonts/ncvlic-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ncvlic-light-webfont.woff2') format('woff2'),
+    url('../fonts/ncvlic-light-webfont.woff') format('woff'),
+    url('../fonts/ncvlic-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;  
+  }
+
+  @font-face {
+    font-family: 'Nivea';
+    src: url('../fonts/ncvlic-bold-webfont.eot');
+    src: local('ncvlic-bold-webfont'), local('ncvlic-bold-webfont'),
+    url('../fonts/ncvlic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ncvlic-bold-webfont.woff2') format('woff2'),
+    url('../fonts/ncvlic-bold-webfont.woff') format('woff'),
+    url('../fonts/ncvlic-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
