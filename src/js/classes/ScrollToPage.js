@@ -37,22 +37,18 @@ export class ScrollToPage {
             let deltaY = event.originalEvent.deltaY,
                 activePage = self.pages.filter('.is-show'),
                 nextPage = activePage.next(),
-                prevPage = activePage.prev(),
-                linkToPage = 'main';
+                prevPage = activePage.prev();
             if (deltaY > 0) {
                 if (nextPage.length) {
                     self.scroll(nextPage.index());
-                    linkToPage = nextPage.attr('id');
                 }
             }
             if (deltaY < 0) {
                 if (prevPage.length) {
                     self.scroll(prevPage.index());
-                    linkToPage = prevPage.attr('id');
                 }
             }
-            let link = $('.js-menu').find('.js-scroll-link').filter(`[href="#${linkToPage}"]`);
-            Menu.prototype.setActiveLink(link);
+
             if (!activePage.hasClass('.js-winners')) {
                 self.pageScrollOwner.addClass('o-hidden');
             }
@@ -128,6 +124,11 @@ export class ScrollToPage {
             $('.is-show').removeClass('is-hide').prev().addClass('is-hide');
 
             $('.js-menu__item').eq(pageEq).addClass('active').siblings().removeClass('active');
+
+
+            let link = $('.js-menu').find('.js-scroll-link').filter(`[href="#${curPage.attr('id')}"]`);
+            Menu.prototype.setActiveLink(link);
+
 
             self.pageScrollOwner.addClass('o-hidden');
             setTimeout(function () {

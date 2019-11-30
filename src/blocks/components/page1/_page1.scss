@@ -68,6 +68,10 @@
     background: no-repeat center url('../img/page1/bg-right.png');
     background-size: cover;
     align-items: center;
+
+    @include lg-block {
+      padding: 40px 15px;
+    }
   }
 
   &__text {
@@ -124,6 +128,8 @@
   }
 
   &__raffle {
+    width: 100%;
+    height: 100%;
     
     & .title {
       font-weight: bold;
@@ -135,10 +141,11 @@
     }
 
     & .products__img {
-      max-width: 596px;
-      width: 100%;
+      height: #{'calc(100% - 8.82vh)'};
 
       & img {
+        margin: auto;
+        display: block;
         max-width: 100%;
         max-height: 100%;
       }

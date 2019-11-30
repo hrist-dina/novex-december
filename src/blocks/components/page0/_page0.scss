@@ -62,7 +62,7 @@
     }
 
     @include sm-block {
-      font-size: 36px;
+      font-size: 35px;
     }
 
     &__wrap {
@@ -92,7 +92,11 @@
   }
 
   & .button {
-    margin-top: 50px;
+    margin-top: 5.08vh  /* 50/9.85 */;
+
+    @include notebook {
+
+    }
 
     @include sm-block {
       margin-top: 30px;
@@ -146,8 +150,12 @@
 
 
   &__text {
-    margin-top: 23.63vh  /* 100/9.85 */;
+    margin-top: 23.63vh;
     z-index: 10;
+
+    @include notebook {
+      margin-top: 15.23vh  /* 150/9.85 */;
+    }
 
     @include lg-block {
       margin-top: 30px;
@@ -303,7 +311,7 @@
   flex: 0 1 auto;
 
   @include lg-block {
-    left: 70px;
+    left: 15px;
   }
 
   &:before {

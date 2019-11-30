@@ -204,14 +204,14 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .page {
-	top: 0;
-	right: -100%;
-	left: auto;
+	bottom: -100%;
+	top: auto;
+	@include transition(.5s, $ease-google);
 }
 
 .page-0 {
 	z-index: 1;
-	right: 0;
+	top: 0;
 }
 
 .page-1 {
@@ -226,40 +226,28 @@ h1, h2, h3, h4, h5, h6, ul {
 	z-index: 400;
 }
 
+.page:not(.page-4).is-show {
+	bottom: 0;
+}
+
+.page:not(.page-4).is-hide {
+	z-index: 0;
+	bottom: 0;
+}
+
+
 .page-4 {
+	top: 100%;
+}
+.page-4.is-show {
+	z-index: 500;
+	top: 0;
+	bottom: auto;
+}
+.page-4.is-hide {
+	top: 100%;
 	z-index: 500;
 }
-
-.page-5 {
-	z-index: 600;
-}
-
-.page.is-show {
-	top: 0;
-}
-
-.page.is-show {
-	right: 0;
-}
-.page.is-hide {
-	z-index: 0;
-	right: 0;
-}
-
-.container_winners {
-	@include transition(1.2s, ease);
-}
-
-.page.is-show .container_winners {
-	right: 0;
-}
-.container_winners {
-	right: -100%;
-}
-.page.is-hide .container_winners {
-	right: -100%;
-}
-
 
 @include lg-block {
 	.container {
@@ -312,6 +300,7 @@ h1, h2, h3, h4, h5, h6, ul {
 	background: #FF4F73;
 	cursor: pointer;
 	box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.2);
+	@include transition();
 
 	@include lg-block {
 		font-size: 16px;
@@ -319,7 +308,7 @@ h1, h2, h3, h4, h5, h6, ul {
 	}
 
 	&:hover {
-		background: linear-gradient(99.37deg, rgba(255, 79, 115, 1) 7.72%, rgba(255, 79, 115, 1) 92.55%);
+		background: #ff3856;
 	}
 
 	&:active {
