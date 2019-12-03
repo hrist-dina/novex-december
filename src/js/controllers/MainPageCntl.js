@@ -67,9 +67,8 @@ export class MainPageCntl {
                 success: function (e) {
                     if("success" === e.status) {
                         $(".js-ticket-form-success").show();
-                        $(".js-ticket-form-success-after-action").hide().find("[name=sms]").val("");
-                        $(".js-ticket-form-success-after-action").find("[name=tel]").val("");
-                        //ym(55166008, 'reachGoal', 'sendform');
+                        $(".js-ticket-form-success-before-action").hide().find("[name=sms]").val("");
+                        $(".js-ticket-form-success-before-action").find("[name=tel]").val("");
                     }
                     if("warning" === e.status) {
                         $(".js-ticket-form-sms").find("button").before('<p class="ticket-form__error-text noabsolute nocolor">' + e.mess + "</p>");

@@ -50,7 +50,7 @@ export class TicketForm {
             dataType: "json",
             success: function (data) {
                 if (data.status == 'smscheck') {
-                    $(".js-ticket-form-success-after-action").find("[name=tel]").val(data.tel);
+                    $(".js-ticket-form-success-before-action").find("[name=tel]").val(data.tel);
                     self.smsCheck();
                 }
                 else if (data.status == 'success' ) {
@@ -73,8 +73,7 @@ export class TicketForm {
 
     smsCheck () {
         $('.js-ticket-form-success').hide();
-        $('.js-ticket-form-success-after-action').show();
-        //ym(55166008, 'reachGoal', 'reg_code');
+        $('.js-ticket-form-success-before-action').show();
         //self.showSuccessMessage();
     }
 
